@@ -1,0 +1,188 @@
+{
+  "version": 1,
+  "symbols": [
+    "b",
+    "0",
+    "1"
+  ],
+  "states": [
+    {
+      "id": "q0",
+      "rules": [
+        {
+          "read": "b",
+          "write": "",
+          "move": "",
+          "next": ""
+        },
+        {
+          "read": "0",
+          "write": "1",
+          "move": "L",
+          "next": ""
+        },
+        {
+          "read": "1",
+          "write": "0",
+          "move": "L",
+          "next": "q1"
+        }
+      ],
+      "color": "#d0ebff"
+    },
+    {
+      "id": "q1",
+      "rules": [
+        {
+          "read": "b",
+          "write": "",
+          "move": "L",
+          "next": "q2"
+        },
+        {
+          "read": "0",
+          "write": "",
+          "move": "L",
+          "next": ""
+        },
+        {
+          "read": "1",
+          "write": "",
+          "move": "L",
+          "next": ""
+        }
+      ],
+      "color": "#ffd6a5"
+    },
+    {
+      "id": "q2",
+      "rules": [
+        {
+          "read": "b",
+          "write": "1",
+          "move": "R",
+          "next": "q3"
+        },
+        {
+          "read": "0",
+          "write": "1",
+          "move": "R",
+          "next": "q3"
+        },
+        {
+          "read": "1",
+          "write": "0",
+          "move": "L",
+          "next": ""
+        }
+      ],
+      "color": "#caffbf"
+    },
+    {
+      "id": "q3",
+      "rules": [
+        {
+          "read": "b",
+          "write": "",
+          "move": "R",
+          "next": "q4"
+        },
+        {
+          "read": "0",
+          "write": "",
+          "move": "R",
+          "next": ""
+        },
+        {
+          "read": "1",
+          "write": "",
+          "move": "R",
+          "next": ""
+        }
+      ],
+      "color": "#fdffb6"
+    },
+    {
+      "id": "q4",
+      "rules": [
+        {
+          "read": "b",
+          "write": "",
+          "move": "",
+          "next": "STOP"
+        },
+        {
+          "read": "0",
+          "write": "",
+          "move": "R",
+          "next": ""
+        },
+        {
+          "read": "1",
+          "write": "",
+          "move": "R",
+          "next": "q5"
+        }
+      ],
+      "color": "#bdb2ff"
+    },
+    {
+      "id": "q5",
+      "rules": [
+        {
+          "read": "b",
+          "write": "",
+          "move": "L",
+          "next": "q0"
+        },
+        {
+          "read": "0",
+          "write": "",
+          "move": "R",
+          "next": ""
+        },
+        {
+          "read": "1",
+          "write": "",
+          "move": "R",
+          "next": ""
+        }
+      ],
+      "color": "#ffadad"
+    }
+  ],
+  "tape": [
+    "b",
+    "b",
+    "b",
+    "b",
+    "b",
+    "b",
+    "b",
+    "b",
+    "b",
+    "b",
+    "b",
+    "b",
+    "b",
+    "b",
+    "b",
+    1,
+    1,
+    "b",
+    1,
+    0,
+    1,
+    "b",
+    "b",
+    "b",
+    "b",
+    "b",
+    "b",
+    "b",
+    "b",
+    "b",
+    "b",
+    "b"
+  ]
+}

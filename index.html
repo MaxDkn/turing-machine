@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simulateur de la Machine de Turing</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/viz.js@2.1.2/viz.js"></script>
+  <script src="https://unpkg.com/viz.js@2.1.2/full.render.js"></script>
+</head>
+<body>
+  <div class="main-container">
+    <div class="left-panel">
+      <div class="top-controls">
+        <div class="left">
+          <button id="toggleRunBtn" class="btn btn-primary">
+            <img id="toggleRunIcon" src="img/green_flag.svg" alt="Start" width="16" height="16">
+            <span>Lancer le script</span>
+          </button>
+        </div>
+        <div class="right">
+          <div id="stopBlock" class="stop-block" draggable="true">STOP</div>
+          <button id="addStateBtn" class="btn">+ Ajouter un état</button>
+        </div>
+      </div>
+      <div class="table-container">
+        <table id="statesTable">
+          <thead>
+            <tr>
+              <th>État</th>
+              <th>Lire</th>
+              <th>Écrire</th>
+              <th>Mouvement</th>
+              <th>Aller vers</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="right-panel">
+      <canvas id="scene"></canvas>
+      <div class="right-top-controls">
+        <button id="importBtn" class="btn" title="Importer (.json)">
+          <img src="img/import.svg" alt="Importer" width="16" height="16">
+          <span>Importer</span>
+        </button>
+        <button id="exportBtn" class="btn" title="Exporter (.json)">
+          <img src="img/export.svg" alt="Exporter" width="16" height="16">
+          <span>Exporter</span>
+        </button>
+      </div>
+      
+      <div class="bottom-controls">
+        <button id="leftBtn">⬅</button>
+        <button id="rightBtn">➡</button>
+        <button id="write0Btn">0</button>
+        <button id="write1Btn">1</button>
+        <button id="writeBlankBtn">b</button>
+      </div>
+    </div>
+  </div>
+  <input type="file" id="importFile" accept="application/json" style="display:none" />
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="js/script.js"></script>
+</body>
+</html>
